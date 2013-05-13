@@ -3,6 +3,7 @@
 import de.bezier.data.*;
 XlsReader reader;
 PImage img;
+String url;
 float spectralIrregularity;
 float pulseClarity;
 float soundLevel;
@@ -17,7 +18,8 @@ float avgb = 0;
 //added setup and draw to get reader to work and to cycle through the data
 void setup() { 
   reader = new XlsReader(this, "data.xls");
-  img = loadImage("34339273.jpg");
+  url = "http://farm6.staticflickr.com/5312/5889940064_89316b2643.jpg"
+  img = loadImage(url);
   colorMode(HSB, 1);
   size (img.width, img.height);
   //slow down the frame rate 
